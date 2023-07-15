@@ -34,12 +34,12 @@ namespace InventorySystem_Dekan_Peterson
 
         private void mainPartsAdd_Click(object sender, EventArgs e)
         {
-            new AddPart().Show();
+            new AddPart().ShowDialog();
         }
 
         private void mainPartsModify_Click(object sender, EventArgs e)
         {
-            new ModifyPart().Show();
+            new ModifyPart().ShowDialog();
         }
 
         private void mainPartsDelete_Click(object sender, EventArgs e)
@@ -54,12 +54,12 @@ namespace InventorySystem_Dekan_Peterson
 
         private void mainProductAdd_Click(object sender, EventArgs e)
         {
-            new AddProduct().Show();
+            new AddProduct().ShowDialog();
         }
 
         private void mainProductModify_Click(object sender, EventArgs e)
         {
-            new ModifyProduct().Show();
+            new ModifyProduct().ShowDialog();
         }
 
         private void mainProductDelete_Click(object sender, EventArgs e)
