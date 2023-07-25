@@ -34,7 +34,7 @@
             this.modPartInv = new System.Windows.Forms.Label();
             this.modPartPriceCost = new System.Windows.Forms.Label();
             this.modPartMax = new System.Windows.Forms.Label();
-            this.modPartMachineID = new System.Windows.Forms.Label();
+            this.modPartMachComp = new System.Windows.Forms.Label();
             this.modPartMin = new System.Windows.Forms.Label();
             this.modPartSaveButton = new System.Windows.Forms.Button();
             this.modPartCancelButton = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.modPartPriceCostTextBox = new System.Windows.Forms.TextBox();
             this.modPartInvTextBox = new System.Windows.Forms.TextBox();
             this.modPartNameTextBox = new System.Windows.Forms.TextBox();
-            this.modPartMachineIDTextBox = new System.Windows.Forms.TextBox();
+            this.modPartMachCompTextBox = new System.Windows.Forms.TextBox();
             this.modPartInHouseButton = new System.Windows.Forms.RadioButton();
             this.modPartOutsourceButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
@@ -110,15 +110,15 @@
             this.modPartMax.TabIndex = 5;
             this.modPartMax.Text = "Max";
             // 
-            // modPartMachineID
+            // modPartMachComp
             // 
-            this.modPartMachineID.AutoSize = true;
-            this.modPartMachineID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modPartMachineID.Location = new System.Drawing.Point(111, 323);
-            this.modPartMachineID.Name = "modPartMachineID";
-            this.modPartMachineID.Size = new System.Drawing.Size(94, 20);
-            this.modPartMachineID.TabIndex = 6;
-            this.modPartMachineID.Text = "Machine ID";
+            this.modPartMachComp.AutoSize = true;
+            this.modPartMachComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modPartMachComp.Location = new System.Drawing.Point(89, 323);
+            this.modPartMachComp.Name = "modPartMachComp";
+            this.modPartMachComp.Size = new System.Drawing.Size(94, 20);
+            this.modPartMachComp.TabIndex = 6;
+            this.modPartMachComp.Text = "Machine ID";
             // 
             // modPartMin
             // 
@@ -192,16 +192,17 @@
             this.modPartNameTextBox.Size = new System.Drawing.Size(100, 22);
             this.modPartNameTextBox.TabIndex = 15;
             // 
-            // modPartMachineIDTextBox
+            // modPartMachCompTextBox
             // 
-            this.modPartMachineIDTextBox.Location = new System.Drawing.Point(228, 323);
-            this.modPartMachineIDTextBox.Name = "modPartMachineIDTextBox";
-            this.modPartMachineIDTextBox.Size = new System.Drawing.Size(166, 22);
-            this.modPartMachineIDTextBox.TabIndex = 16;
+            this.modPartMachCompTextBox.Location = new System.Drawing.Point(228, 323);
+            this.modPartMachCompTextBox.Name = "modPartMachCompTextBox";
+            this.modPartMachCompTextBox.Size = new System.Drawing.Size(166, 22);
+            this.modPartMachCompTextBox.TabIndex = 16;
             // 
             // modPartInHouseButton
             // 
             this.modPartInHouseButton.AutoSize = true;
+            this.modPartInHouseButton.Checked = true;
             this.modPartInHouseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modPartInHouseButton.Location = new System.Drawing.Point(183, 9);
             this.modPartInHouseButton.Name = "modPartInHouseButton";
@@ -220,7 +221,6 @@
             this.modPartOutsourceButton.Name = "modPartOutsourceButton";
             this.modPartOutsourceButton.Size = new System.Drawing.Size(117, 24);
             this.modPartOutsourceButton.TabIndex = 19;
-            this.modPartOutsourceButton.TabStop = true;
             this.modPartOutsourceButton.Text = "Outsourced";
             this.modPartOutsourceButton.UseVisualStyleBackColor = true;
             this.modPartOutsourceButton.CheckedChanged += new System.EventHandler(this.modPartOutsourcedRadio_CheckChanged);
@@ -232,7 +232,7 @@
             this.ClientSize = new System.Drawing.Size(568, 450);
             this.Controls.Add(this.modPartOutsourceButton);
             this.Controls.Add(this.modPartInHouseButton);
-            this.Controls.Add(this.modPartMachineIDTextBox);
+            this.Controls.Add(this.modPartMachCompTextBox);
             this.Controls.Add(this.modPartNameTextBox);
             this.Controls.Add(this.modPartInvTextBox);
             this.Controls.Add(this.modPartPriceCostTextBox);
@@ -242,7 +242,7 @@
             this.Controls.Add(this.modPartCancelButton);
             this.Controls.Add(this.modPartSaveButton);
             this.Controls.Add(this.modPartMin);
-            this.Controls.Add(this.modPartMachineID);
+            this.Controls.Add(this.modPartMachComp);
             this.Controls.Add(this.modPartMax);
             this.Controls.Add(this.modPartPriceCost);
             this.Controls.Add(this.modPartInv);
@@ -252,7 +252,6 @@
             this.Name = "ModifyPart";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Part";
-            this.Load += new System.EventHandler(this.ModifyPart_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +265,7 @@
         private System.Windows.Forms.Label modPartInv;
         private System.Windows.Forms.Label modPartPriceCost;
         private System.Windows.Forms.Label modPartMax;
-        private System.Windows.Forms.Label modPartMachineID;
+        private System.Windows.Forms.Label modPartMachComp;
         private System.Windows.Forms.Label modPartMin;
         private System.Windows.Forms.Button modPartSaveButton;
         private System.Windows.Forms.Button modPartCancelButton;
@@ -276,7 +275,7 @@
         private System.Windows.Forms.TextBox modPartPriceCostTextBox;
         private System.Windows.Forms.TextBox modPartInvTextBox;
         private System.Windows.Forms.TextBox modPartNameTextBox;
-        private System.Windows.Forms.TextBox modPartMachineIDTextBox;
+        private System.Windows.Forms.TextBox modPartMachCompTextBox;
         private System.Windows.Forms.RadioButton modPartInHouseButton;
         private System.Windows.Forms.RadioButton modPartOutsourceButton;
     }

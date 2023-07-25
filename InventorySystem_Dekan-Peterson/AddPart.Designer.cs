@@ -40,7 +40,7 @@
             this.addPartCancelButton = new System.Windows.Forms.Button();
             this.addPartSaveButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.addPartMachComp = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,7 +57,6 @@
             this.outsourcedPartButton.Name = "outsourcedPartButton";
             this.outsourcedPartButton.Size = new System.Drawing.Size(117, 24);
             this.outsourcedPartButton.TabIndex = 38;
-            this.outsourcedPartButton.TabStop = true;
             this.outsourcedPartButton.Text = "Outsourced";
             this.outsourcedPartButton.UseVisualStyleBackColor = true;
             this.outsourcedPartButton.CheckedChanged += new System.EventHandler(this.addPartOutsourcedRadio_CheckChanged);
@@ -65,6 +64,7 @@
             // inHousePartButton
             // 
             this.inHousePartButton.AutoSize = true;
+            this.inHousePartButton.Checked = true;
             this.inHousePartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inHousePartButton.Location = new System.Drawing.Point(183, 9);
             this.inHousePartButton.Name = "inHousePartButton";
@@ -154,15 +154,15 @@
             this.label8.TabIndex = 27;
             this.label8.Text = "Min";
             // 
-            // label7
+            // addPartMachComp
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(111, 323);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 20);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Machine ID";
+            this.addPartMachComp.AutoSize = true;
+            this.addPartMachComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addPartMachComp.Location = new System.Drawing.Point(80, 325);
+            this.addPartMachComp.Name = "addPartMachComp";
+            this.addPartMachComp.Size = new System.Drawing.Size(94, 20);
+            this.addPartMachComp.TabIndex = 26;
+            this.addPartMachComp.Text = "Machine ID";
             // 
             // label6
             // 
@@ -242,7 +242,7 @@
             this.Controls.Add(this.addPartCancelButton);
             this.Controls.Add(this.addPartSaveButton);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.addPartMachComp);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -251,7 +251,6 @@
             this.Controls.Add(this.label1);
             this.Name = "AddPart";
             this.Text = "Part";
-            this.Load += new System.EventHandler(this.AddPart_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,7 +270,7 @@
         private System.Windows.Forms.Button addPartCancelButton;
         private System.Windows.Forms.Button addPartSaveButton;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label addPartMachComp;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

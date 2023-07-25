@@ -11,10 +11,11 @@ namespace InventorySystem_Dekan_Peterson
     public class Product
     {
         public BindingList<Part> AssociatedParts = new BindingList<Part>();
+
         private int productID;
         private string name;
-        private decimal price;
         private int inStock;
+        private decimal price;
         private int max;
         private int min;
 
@@ -51,10 +52,10 @@ namespace InventorySystem_Dekan_Peterson
         }
         public void AddAssociatedPart(Part part)
         {
-            AssociatedParts.Add(part);
+            AssociatedParts.Add(part); 
         }
         public bool RemoveAssociatedPart(int partID)
-        { 
+        {
             bool success = false;
             foreach (Part part in AssociatedParts)
             {

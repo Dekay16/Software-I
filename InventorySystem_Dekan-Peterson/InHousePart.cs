@@ -21,7 +21,7 @@ namespace InventorySystem_Dekan_Peterson
             InStock = inStock;
             Price = price.ToString();
             Max = max;
-            Min = max;
+            Min = min;
         }
         public InHousePart(int partID, string name, int inStock, decimal price, int max, int min, int machineID)
         {
@@ -30,7 +30,7 @@ namespace InventorySystem_Dekan_Peterson
             InStock = inStock;
             Price = price.ToString();
             Max = max;
-            Min = max;
+            Min = min;
             MachineID = machineID;
         }
     }

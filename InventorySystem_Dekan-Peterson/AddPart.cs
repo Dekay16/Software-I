@@ -19,27 +19,22 @@ namespace InventorySystem_Dekan_Peterson
 
         private void addPartSave_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void addPartCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void addPartOutsourcedRadio_CheckChanged(object sender, EventArgs e)
         {
-
+            addPartMachComp.Text = "Company Name";
         }
 
         private void addPartInHouseRadio_CheckChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void AddPart_Load(object sender, EventArgs e)
-        {
-
+            addPartMachComp.Text = "Machine ID";
         }
     }
 }

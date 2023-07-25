@@ -12,39 +12,41 @@ namespace InventorySystem_Dekan_Peterson
 {
     public partial class AddProduct : Form
     {
+        BindingList<Part> partsToAdd = new BindingList<Part>();
         public AddProduct()
         {
             InitializeComponent();
         }
 
-        private void addProductSearch_Click(object sender, EventArgs e)
+        public void AddProduct_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void addProductAdd_Click(object sender, EventArgs e)
+        private void addProductDeleteButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void addProductDelete_Click(object sender, EventArgs e)
+        private void addProductSearchButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void addProductSave_Click(object sender, EventArgs e)
+        private void addProductAddButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void addProductCancel_Click(object sender, EventArgs e)
+        private void addProductSaveButton_Click(object sender, EventArgs e)
         {
-
+            
         }
+    
 
-        private void AddProduct_Load(object sender, EventArgs e)
+        private void addProductCancelButton_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

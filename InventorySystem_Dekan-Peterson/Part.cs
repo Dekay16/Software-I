@@ -21,12 +21,19 @@ namespace InventorySystem_Dekan_Peterson
         public int InStock { get; set; }
         public string Price
         {
-            get { return price.ToString("C"); }
+            get 
+            { 
+                return price.ToString("C"); 
+            }
             set
             {
                 if (value.StartsWith("$"))
                 {
                     price = decimal.Parse(value.Substring(1));
+                }
+                else
+                {
+                    price = decimal.Parse(value);
                 }
             }
         }
