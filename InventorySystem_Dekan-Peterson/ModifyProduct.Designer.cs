@@ -65,7 +65,7 @@
             this.modProductAssociatedDataGridView.RowHeadersWidth = 51;
             this.modProductAssociatedDataGridView.RowTemplate.Height = 24;
             this.modProductAssociatedDataGridView.Size = new System.Drawing.Size(496, 136);
-            this.modProductAssociatedDataGridView.TabIndex = 60;
+            this.modProductAssociatedDataGridView.TabIndex = 11;
             // 
             // modProductCanidateDataGridView
             // 
@@ -77,7 +77,7 @@
             this.modProductCanidateDataGridView.RowHeadersWidth = 51;
             this.modProductCanidateDataGridView.RowTemplate.Height = 24;
             this.modProductCanidateDataGridView.Size = new System.Drawing.Size(496, 136);
-            this.modProductCanidateDataGridView.TabIndex = 59;
+            this.modProductCanidateDataGridView.TabIndex = 9;
             // 
             // label9
             // 
@@ -106,42 +106,42 @@
             this.modProductNameTextBox.Location = new System.Drawing.Point(155, 204);
             this.modProductNameTextBox.Name = "modProductNameTextBox";
             this.modProductNameTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modProductNameTextBox.TabIndex = 56;
+            this.modProductNameTextBox.TabIndex = 2;
             // 
             // modProductInvTextBox
             // 
             this.modProductInvTextBox.Location = new System.Drawing.Point(155, 255);
             this.modProductInvTextBox.Name = "modProductInvTextBox";
             this.modProductInvTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modProductInvTextBox.TabIndex = 55;
+            this.modProductInvTextBox.TabIndex = 3;
             // 
             // modProductPriceCostTextBox
             // 
             this.modProductPriceCostTextBox.Location = new System.Drawing.Point(155, 309);
             this.modProductPriceCostTextBox.Name = "modProductPriceCostTextBox";
             this.modProductPriceCostTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modProductPriceCostTextBox.TabIndex = 54;
+            this.modProductPriceCostTextBox.TabIndex = 4;
             // 
             // modProductMaxTextBox
             // 
             this.modProductMaxTextBox.Location = new System.Drawing.Point(155, 360);
             this.modProductMaxTextBox.Name = "modProductMaxTextBox";
             this.modProductMaxTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modProductMaxTextBox.TabIndex = 53;
+            this.modProductMaxTextBox.TabIndex = 5;
             // 
             // modProductMinTextBox
             // 
             this.modProductMinTextBox.Location = new System.Drawing.Point(338, 360);
             this.modProductMinTextBox.Name = "modProductMinTextBox";
             this.modProductMinTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modProductMinTextBox.TabIndex = 52;
+            this.modProductMinTextBox.TabIndex = 6;
             // 
             // modProductIDTextBox
             // 
             this.modProductIDTextBox.Location = new System.Drawing.Point(155, 154);
             this.modProductIDTextBox.Name = "modProductIDTextBox";
             this.modProductIDTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modProductIDTextBox.TabIndex = 51;
+            this.modProductIDTextBox.TabIndex = 1;
             // 
             // label8
             // 
@@ -219,7 +219,7 @@
             this.modProductDeleteButton.Location = new System.Drawing.Point(939, 494);
             this.modProductDeleteButton.Name = "modProductDeleteButton";
             this.modProductDeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.modProductDeleteButton.TabIndex = 63;
+            this.modProductDeleteButton.TabIndex = 12;
             this.modProductDeleteButton.Text = "Delete";
             this.modProductDeleteButton.UseVisualStyleBackColor = true;
             this.modProductDeleteButton.Click += new System.EventHandler(this.modProductDeleteButton_Click);
@@ -229,7 +229,7 @@
             this.modProductCancelButton.Location = new System.Drawing.Point(939, 535);
             this.modProductCancelButton.Name = "modProductCancelButton";
             this.modProductCancelButton.Size = new System.Drawing.Size(75, 23);
-            this.modProductCancelButton.TabIndex = 62;
+            this.modProductCancelButton.TabIndex = 14;
             this.modProductCancelButton.Text = "Cancel";
             this.modProductCancelButton.UseVisualStyleBackColor = true;
             this.modProductCancelButton.Click += new System.EventHandler(this.modProductCancelButton_Click);
@@ -239,7 +239,7 @@
             this.modProductSaveButton.Location = new System.Drawing.Point(837, 535);
             this.modProductSaveButton.Name = "modProductSaveButton";
             this.modProductSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.modProductSaveButton.TabIndex = 61;
+            this.modProductSaveButton.TabIndex = 13;
             this.modProductSaveButton.Text = "Save";
             this.modProductSaveButton.UseVisualStyleBackColor = true;
             this.modProductSaveButton.Click += new System.EventHandler(this.modProductSaveButton_Click);
@@ -249,7 +249,7 @@
             this.modProductAddButton.Location = new System.Drawing.Point(939, 271);
             this.modProductAddButton.Name = "modProductAddButton";
             this.modProductAddButton.Size = new System.Drawing.Size(75, 23);
-            this.modProductAddButton.TabIndex = 64;
+            this.modProductAddButton.TabIndex = 10;
             this.modProductAddButton.Text = "Add";
             this.modProductAddButton.UseVisualStyleBackColor = true;
             this.modProductAddButton.Click += new System.EventHandler(this.modProductAddButton_Click);
@@ -259,16 +259,17 @@
             this.modProductSearchTextBox.Location = new System.Drawing.Point(858, 76);
             this.modProductSearchTextBox.Name = "modProductSearchTextBox";
             this.modProductSearchTextBox.Size = new System.Drawing.Size(180, 22);
-            this.modProductSearchTextBox.TabIndex = 66;
+            this.modProductSearchTextBox.TabIndex = 8;
             // 
             // modProductSearchButton
             // 
             this.modProductSearchButton.Location = new System.Drawing.Point(777, 76);
             this.modProductSearchButton.Name = "modProductSearchButton";
             this.modProductSearchButton.Size = new System.Drawing.Size(75, 23);
-            this.modProductSearchButton.TabIndex = 65;
+            this.modProductSearchButton.TabIndex = 7;
             this.modProductSearchButton.Text = "Search";
             this.modProductSearchButton.UseVisualStyleBackColor = true;
+            this.modProductSearchButton.Click += new System.EventHandler(this.modProductSearchButton_Click);
             // 
             // ModifyProduct
             // 

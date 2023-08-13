@@ -49,22 +49,10 @@
             this.addProductSearchButton = new System.Windows.Forms.Button();
             this.addProductSearchTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.addProductCanidatePIDDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addProductCanidateNameDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addProductCanidateInvDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addProductCanidatePriceDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addProductCanidateMinDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addProductCanidateMaxDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.addProductAssociatePIDDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addProductAssociateNameDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addProductAssociateInvDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addProductAssociatePriceDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addProductAssociateMinDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addProductAssociateMaxDVG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.addPartCandidateDGV = new System.Windows.Forms.DataGridView();
+            this.addPartAssociatedDGV = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.addPartCandidateDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPartAssociatedDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // addProductNameTextBox
@@ -72,49 +60,49 @@
             this.addProductNameTextBox.Location = new System.Drawing.Point(155, 204);
             this.addProductNameTextBox.Name = "addProductNameTextBox";
             this.addProductNameTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addProductNameTextBox.TabIndex = 35;
+            this.addProductNameTextBox.TabIndex = 2;
             // 
             // addProductInvTextBox
             // 
             this.addProductInvTextBox.Location = new System.Drawing.Point(155, 255);
             this.addProductInvTextBox.Name = "addProductInvTextBox";
             this.addProductInvTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addProductInvTextBox.TabIndex = 34;
+            this.addProductInvTextBox.TabIndex = 3;
             // 
             // addProductPriceCostTextBox
             // 
             this.addProductPriceCostTextBox.Location = new System.Drawing.Point(155, 309);
             this.addProductPriceCostTextBox.Name = "addProductPriceCostTextBox";
             this.addProductPriceCostTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addProductPriceCostTextBox.TabIndex = 33;
+            this.addProductPriceCostTextBox.TabIndex = 4;
             // 
             // addProductMaxTextBox
             // 
             this.addProductMaxTextBox.Location = new System.Drawing.Point(155, 360);
             this.addProductMaxTextBox.Name = "addProductMaxTextBox";
             this.addProductMaxTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addProductMaxTextBox.TabIndex = 32;
+            this.addProductMaxTextBox.TabIndex = 5;
             // 
             // addProductMinTextBox
             // 
             this.addProductMinTextBox.Location = new System.Drawing.Point(338, 360);
             this.addProductMinTextBox.Name = "addProductMinTextBox";
             this.addProductMinTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addProductMinTextBox.TabIndex = 31;
+            this.addProductMinTextBox.TabIndex = 6;
             // 
             // addProductIDTextBox
             // 
             this.addProductIDTextBox.Location = new System.Drawing.Point(155, 154);
             this.addProductIDTextBox.Name = "addProductIDTextBox";
             this.addProductIDTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addProductIDTextBox.TabIndex = 30;
+            this.addProductIDTextBox.TabIndex = 1;
             // 
             // addProductCancelButton
             // 
             this.addProductCancelButton.Location = new System.Drawing.Point(973, 525);
             this.addProductCancelButton.Name = "addProductCancelButton";
             this.addProductCancelButton.Size = new System.Drawing.Size(75, 23);
-            this.addProductCancelButton.TabIndex = 29;
+            this.addProductCancelButton.TabIndex = 14;
             this.addProductCancelButton.Text = "Cancel";
             this.addProductCancelButton.UseVisualStyleBackColor = true;
             this.addProductCancelButton.Click += new System.EventHandler(this.addProductCancelButton_Click);
@@ -124,7 +112,7 @@
             this.addProductSaveButton.Location = new System.Drawing.Point(871, 525);
             this.addProductSaveButton.Name = "addProductSaveButton";
             this.addProductSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.addProductSaveButton.TabIndex = 28;
+            this.addProductSaveButton.TabIndex = 13;
             this.addProductSaveButton.Text = "Save";
             this.addProductSaveButton.UseVisualStyleBackColor = true;
             this.addProductSaveButton.Click += new System.EventHandler(this.addProductSaveButton_Click);
@@ -205,7 +193,7 @@
             this.addProductDeleteButton.Location = new System.Drawing.Point(973, 484);
             this.addProductDeleteButton.Name = "addProductDeleteButton";
             this.addProductDeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.addProductDeleteButton.TabIndex = 36;
+            this.addProductDeleteButton.TabIndex = 12;
             this.addProductDeleteButton.Text = "Delete";
             this.addProductDeleteButton.UseVisualStyleBackColor = true;
             this.addProductDeleteButton.Click += new System.EventHandler(this.addProductDeleteButton_Click);
@@ -215,7 +203,7 @@
             this.addProductAddButton.Location = new System.Drawing.Point(973, 255);
             this.addProductAddButton.Name = "addProductAddButton";
             this.addProductAddButton.Size = new System.Drawing.Size(75, 23);
-            this.addProductAddButton.TabIndex = 37;
+            this.addProductAddButton.TabIndex = 10;
             this.addProductAddButton.Text = "Add";
             this.addProductAddButton.UseVisualStyleBackColor = true;
             this.addProductAddButton.Click += new System.EventHandler(this.addProductAddButton_Click);
@@ -236,7 +224,7 @@
             this.addProductSearchButton.Location = new System.Drawing.Point(812, 63);
             this.addProductSearchButton.Name = "addProductSearchButton";
             this.addProductSearchButton.Size = new System.Drawing.Size(75, 23);
-            this.addProductSearchButton.TabIndex = 39;
+            this.addProductSearchButton.TabIndex = 7;
             this.addProductSearchButton.Text = "Search";
             this.addProductSearchButton.UseVisualStyleBackColor = true;
             this.addProductSearchButton.Click += new System.EventHandler(this.addProductSearchButton_Click);
@@ -246,7 +234,7 @@
             this.addProductSearchTextBox.Location = new System.Drawing.Point(893, 63);
             this.addProductSearchTextBox.Name = "addProductSearchTextBox";
             this.addProductSearchTextBox.Size = new System.Drawing.Size(180, 22);
-            this.addProductSearchTextBox.TabIndex = 40;
+            this.addProductSearchTextBox.TabIndex = 8;
             // 
             // label9
             // 
@@ -259,123 +247,37 @@
             this.label9.TabIndex = 41;
             this.label9.Text = "Parts Associated with this Product";
             // 
-            // dataGridView1
+            // addPartCandidateDGV
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.addProductCanidatePIDDVG,
-            this.addProductCanidateNameDVG,
-            this.addProductCanidateInvDVG,
-            this.addProductCanidatePriceDVG,
-            this.addProductCanidateMinDVG,
-            this.addProductCanidateMaxDVG});
-            this.dataGridView1.Location = new System.Drawing.Point(577, 111);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(496, 136);
-            this.dataGridView1.TabIndex = 42;
+            this.addPartCandidateDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.addPartCandidateDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.addPartCandidateDGV.Location = new System.Drawing.Point(577, 111);
+            this.addPartCandidateDGV.Name = "addPartCandidateDGV";
+            this.addPartCandidateDGV.RowHeadersVisible = false;
+            this.addPartCandidateDGV.RowHeadersWidth = 51;
+            this.addPartCandidateDGV.RowTemplate.Height = 24;
+            this.addPartCandidateDGV.Size = new System.Drawing.Size(496, 136);
+            this.addPartCandidateDGV.TabIndex = 9;
             // 
-            // addProductCanidatePIDDVG
+            // addPartAssociatedDGV
             // 
-            this.addProductCanidatePIDDVG.HeaderText = "Part ID";
-            this.addProductCanidatePIDDVG.MinimumWidth = 6;
-            this.addProductCanidatePIDDVG.Name = "addProductCanidatePIDDVG";
-            // 
-            // addProductCanidateNameDVG
-            // 
-            this.addProductCanidateNameDVG.HeaderText = "Name";
-            this.addProductCanidateNameDVG.MinimumWidth = 6;
-            this.addProductCanidateNameDVG.Name = "addProductCanidateNameDVG";
-            // 
-            // addProductCanidateInvDVG
-            // 
-            this.addProductCanidateInvDVG.HeaderText = "Inventory";
-            this.addProductCanidateInvDVG.MinimumWidth = 6;
-            this.addProductCanidateInvDVG.Name = "addProductCanidateInvDVG";
-            // 
-            // addProductCanidatePriceDVG
-            // 
-            this.addProductCanidatePriceDVG.HeaderText = "Price";
-            this.addProductCanidatePriceDVG.MinimumWidth = 6;
-            this.addProductCanidatePriceDVG.Name = "addProductCanidatePriceDVG";
-            // 
-            // addProductCanidateMinDVG
-            // 
-            this.addProductCanidateMinDVG.HeaderText = "Min";
-            this.addProductCanidateMinDVG.MinimumWidth = 6;
-            this.addProductCanidateMinDVG.Name = "addProductCanidateMinDVG";
-            // 
-            // addProductCanidateMaxDVG
-            // 
-            this.addProductCanidateMaxDVG.HeaderText = "Max";
-            this.addProductCanidateMaxDVG.MinimumWidth = 6;
-            this.addProductCanidateMaxDVG.Name = "addProductCanidateMaxDVG";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.addProductAssociatePIDDVG,
-            this.addProductAssociateNameDVG,
-            this.addProductAssociateInvDVG,
-            this.addProductAssociatePriceDVG,
-            this.addProductAssociateMinDVG,
-            this.addProductAssociateMaxDVG});
-            this.dataGridView2.Location = new System.Drawing.Point(577, 332);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(496, 136);
-            this.dataGridView2.TabIndex = 43;
-            // 
-            // addProductAssociatePIDDVG
-            // 
-            this.addProductAssociatePIDDVG.HeaderText = "Part ID";
-            this.addProductAssociatePIDDVG.MinimumWidth = 6;
-            this.addProductAssociatePIDDVG.Name = "addProductAssociatePIDDVG";
-            // 
-            // addProductAssociateNameDVG
-            // 
-            this.addProductAssociateNameDVG.HeaderText = "Name";
-            this.addProductAssociateNameDVG.MinimumWidth = 6;
-            this.addProductAssociateNameDVG.Name = "addProductAssociateNameDVG";
-            // 
-            // addProductAssociateInvDVG
-            // 
-            this.addProductAssociateInvDVG.HeaderText = "Inventory";
-            this.addProductAssociateInvDVG.MinimumWidth = 6;
-            this.addProductAssociateInvDVG.Name = "addProductAssociateInvDVG";
-            // 
-            // addProductAssociatePriceDVG
-            // 
-            this.addProductAssociatePriceDVG.HeaderText = "Price";
-            this.addProductAssociatePriceDVG.MinimumWidth = 6;
-            this.addProductAssociatePriceDVG.Name = "addProductAssociatePriceDVG";
-            // 
-            // addProductAssociateMinDVG
-            // 
-            this.addProductAssociateMinDVG.HeaderText = "Min";
-            this.addProductAssociateMinDVG.MinimumWidth = 6;
-            this.addProductAssociateMinDVG.Name = "addProductAssociateMinDVG";
-            // 
-            // addProductAssociateMaxDVG
-            // 
-            this.addProductAssociateMaxDVG.HeaderText = "Max";
-            this.addProductAssociateMaxDVG.MinimumWidth = 6;
-            this.addProductAssociateMaxDVG.Name = "addProductAssociateMaxDVG";
+            this.addPartAssociatedDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.addPartAssociatedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.addPartAssociatedDGV.Location = new System.Drawing.Point(577, 332);
+            this.addPartAssociatedDGV.Name = "addPartAssociatedDGV";
+            this.addPartAssociatedDGV.RowHeadersVisible = false;
+            this.addPartAssociatedDGV.RowHeadersWidth = 51;
+            this.addPartAssociatedDGV.RowTemplate.Height = 24;
+            this.addPartAssociatedDGV.Size = new System.Drawing.Size(496, 136);
+            this.addPartAssociatedDGV.TabIndex = 11;
             // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 589);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.addPartAssociatedDGV);
+            this.Controls.Add(this.addPartCandidateDGV);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.addProductSearchTextBox);
             this.Controls.Add(this.addProductSearchButton);
@@ -400,8 +302,8 @@
             this.Name = "AddProduct";
             this.Text = "Product";
             this.Load += new System.EventHandler(this.AddProduct_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPartCandidateDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addPartAssociatedDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,19 +332,7 @@
         private System.Windows.Forms.Button addProductSearchButton;
         private System.Windows.Forms.TextBox addProductSearchTextBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductCanidatePIDDVG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductCanidateNameDVG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductCanidateInvDVG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductCanidatePriceDVG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductCanidateMinDVG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductCanidateMaxDVG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductAssociatePIDDVG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductAssociateNameDVG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductAssociateInvDVG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductAssociatePriceDVG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductAssociateMinDVG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addProductAssociateMaxDVG;
+        private System.Windows.Forms.DataGridView addPartCandidateDGV;
+        private System.Windows.Forms.DataGridView addPartAssociatedDGV;
     }
 }

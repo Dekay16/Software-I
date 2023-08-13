@@ -63,7 +63,7 @@
             this.mainPartSearchButton.Location = new System.Drawing.Point(291, 70);
             this.mainPartSearchButton.Name = "mainPartSearchButton";
             this.mainPartSearchButton.Size = new System.Drawing.Size(75, 23);
-            this.mainPartSearchButton.TabIndex = 3;
+            this.mainPartSearchButton.TabIndex = 1;
             this.mainPartSearchButton.Text = "Search";
             this.mainPartSearchButton.UseVisualStyleBackColor = true;
             this.mainPartSearchButton.Click += new System.EventHandler(this.mainPartsSearch_Click);
@@ -93,7 +93,7 @@
             this.mainProductSearchButton.Location = new System.Drawing.Point(996, 70);
             this.mainProductSearchButton.Name = "mainProductSearchButton";
             this.mainProductSearchButton.Size = new System.Drawing.Size(75, 23);
-            this.mainProductSearchButton.TabIndex = 6;
+            this.mainProductSearchButton.TabIndex = 7;
             this.mainProductSearchButton.Text = "Search";
             this.mainProductSearchButton.UseVisualStyleBackColor = true;
             this.mainProductSearchButton.Click += new System.EventHandler(this.mainProductSearch_Click);
@@ -103,7 +103,7 @@
             this.mainPartAddButton.Location = new System.Drawing.Point(377, 401);
             this.mainPartAddButton.Name = "mainPartAddButton";
             this.mainPartAddButton.Size = new System.Drawing.Size(75, 23);
-            this.mainPartAddButton.TabIndex = 7;
+            this.mainPartAddButton.TabIndex = 4;
             this.mainPartAddButton.Text = "Add";
             this.mainPartAddButton.UseVisualStyleBackColor = true;
             this.mainPartAddButton.Click += new System.EventHandler(this.mainPartsAdd_Click);
@@ -113,7 +113,7 @@
             this.mainPartModifyButton.Location = new System.Drawing.Point(472, 401);
             this.mainPartModifyButton.Name = "mainPartModifyButton";
             this.mainPartModifyButton.Size = new System.Drawing.Size(75, 23);
-            this.mainPartModifyButton.TabIndex = 8;
+            this.mainPartModifyButton.TabIndex = 5;
             this.mainPartModifyButton.Text = "Modify";
             this.mainPartModifyButton.UseVisualStyleBackColor = true;
             this.mainPartModifyButton.Click += new System.EventHandler(this.mainPartsModify_Click);
@@ -123,7 +123,7 @@
             this.mainPartDeleteButton.Location = new System.Drawing.Point(566, 401);
             this.mainPartDeleteButton.Name = "mainPartDeleteButton";
             this.mainPartDeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.mainPartDeleteButton.TabIndex = 9;
+            this.mainPartDeleteButton.TabIndex = 6;
             this.mainPartDeleteButton.Text = "Delete";
             this.mainPartDeleteButton.UseVisualStyleBackColor = true;
             this.mainPartDeleteButton.Click += new System.EventHandler(this.mainPartsDelete_Click);
@@ -133,7 +133,7 @@
             this.mainProductDeleteButton.Location = new System.Drawing.Point(1266, 401);
             this.mainProductDeleteButton.Name = "mainProductDeleteButton";
             this.mainProductDeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.mainProductDeleteButton.TabIndex = 10;
+            this.mainProductDeleteButton.TabIndex = 13;
             this.mainProductDeleteButton.Text = "Delete";
             this.mainProductDeleteButton.UseVisualStyleBackColor = true;
             this.mainProductDeleteButton.Click += new System.EventHandler(this.mainProductDeleteButton_Click);
@@ -143,7 +143,7 @@
             this.mainProductModifyButton.Location = new System.Drawing.Point(1176, 401);
             this.mainProductModifyButton.Name = "mainProductModifyButton";
             this.mainProductModifyButton.Size = new System.Drawing.Size(75, 23);
-            this.mainProductModifyButton.TabIndex = 11;
+            this.mainProductModifyButton.TabIndex = 12;
             this.mainProductModifyButton.Text = "Modify";
             this.mainProductModifyButton.UseVisualStyleBackColor = true;
             this.mainProductModifyButton.Click += new System.EventHandler(this.mainProductModifyButton_Click);
@@ -153,7 +153,7 @@
             this.mainProductAddButton.Location = new System.Drawing.Point(1079, 401);
             this.mainProductAddButton.Name = "mainProductAddButton";
             this.mainProductAddButton.Size = new System.Drawing.Size(75, 23);
-            this.mainProductAddButton.TabIndex = 12;
+            this.mainProductAddButton.TabIndex = 10;
             this.mainProductAddButton.Text = "Add";
             this.mainProductAddButton.UseVisualStyleBackColor = true;
             this.mainProductAddButton.Click += new System.EventHandler(this.mainProductAddButton_Click);
@@ -168,7 +168,7 @@
             this.mainDataGridParts.RowHeadersWidth = 51;
             this.mainDataGridParts.RowTemplate.Height = 24;
             this.mainDataGridParts.Size = new System.Drawing.Size(624, 285);
-            this.mainDataGridParts.TabIndex = 13;
+            this.mainDataGridParts.TabIndex = 3;
             // 
             // mainDataGridProducts
             // 
@@ -180,28 +180,28 @@
             this.mainDataGridProducts.RowHeadersWidth = 51;
             this.mainDataGridProducts.RowTemplate.Height = 24;
             this.mainDataGridProducts.Size = new System.Drawing.Size(624, 285);
-            this.mainDataGridProducts.TabIndex = 14;
+            this.mainDataGridProducts.TabIndex = 9;
             // 
             // mainPartSearchTextBox
             // 
             this.mainPartSearchTextBox.Location = new System.Drawing.Point(377, 71);
             this.mainPartSearchTextBox.Name = "mainPartSearchTextBox";
             this.mainPartSearchTextBox.Size = new System.Drawing.Size(264, 22);
-            this.mainPartSearchTextBox.TabIndex = 15;
+            this.mainPartSearchTextBox.TabIndex = 2;
             // 
             // mainProductSearchTextBox
             // 
             this.mainProductSearchTextBox.Location = new System.Drawing.Point(1077, 70);
             this.mainProductSearchTextBox.Name = "mainProductSearchTextBox";
             this.mainProductSearchTextBox.Size = new System.Drawing.Size(264, 22);
-            this.mainProductSearchTextBox.TabIndex = 16;
+            this.mainProductSearchTextBox.TabIndex = 8;
             // 
             // mainExitbutton
             // 
             this.mainExitbutton.Location = new System.Drawing.Point(1266, 484);
             this.mainExitbutton.Name = "mainExitbutton";
             this.mainExitbutton.Size = new System.Drawing.Size(75, 23);
-            this.mainExitbutton.TabIndex = 17;
+            this.mainExitbutton.TabIndex = 14;
             this.mainExitbutton.Text = "Exit";
             this.mainExitbutton.UseVisualStyleBackColor = true;
             this.mainExitbutton.Click += new System.EventHandler(this.mainExitbutton_Click);
@@ -249,11 +249,11 @@
         private System.Windows.Forms.Button mainProductDeleteButton;
         private System.Windows.Forms.Button mainProductModifyButton;
         private System.Windows.Forms.Button mainProductAddButton;
-        private System.Windows.Forms.DataGridView mainDataGridParts;
-        private System.Windows.Forms.DataGridView mainDataGridProducts;
         private System.Windows.Forms.TextBox mainPartSearchTextBox;
         private System.Windows.Forms.TextBox mainProductSearchTextBox;
         private System.Windows.Forms.Button mainExitbutton;
+        public System.Windows.Forms.DataGridView mainDataGridParts;
+        public System.Windows.Forms.DataGridView mainDataGridProducts;
     }
 }
 

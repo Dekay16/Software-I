@@ -56,7 +56,7 @@
             this.outsourcedPartButton.Location = new System.Drawing.Point(307, 9);
             this.outsourcedPartButton.Name = "outsourcedPartButton";
             this.outsourcedPartButton.Size = new System.Drawing.Size(117, 24);
-            this.outsourcedPartButton.TabIndex = 38;
+            this.outsourcedPartButton.TabIndex = 2;
             this.outsourcedPartButton.Text = "Outsourced";
             this.outsourcedPartButton.UseVisualStyleBackColor = true;
             this.outsourcedPartButton.CheckedChanged += new System.EventHandler(this.addPartOutsourcedRadio_CheckChanged);
@@ -69,7 +69,7 @@
             this.inHousePartButton.Location = new System.Drawing.Point(183, 9);
             this.inHousePartButton.Name = "inHousePartButton";
             this.inHousePartButton.Size = new System.Drawing.Size(98, 24);
-            this.inHousePartButton.TabIndex = 37;
+            this.inHousePartButton.TabIndex = 1;
             this.inHousePartButton.TabStop = true;
             this.inHousePartButton.Text = "In-House";
             this.inHousePartButton.UseVisualStyleBackColor = true;
@@ -80,56 +80,56 @@
             this.addPartMachineIDTextBox.Location = new System.Drawing.Point(228, 323);
             this.addPartMachineIDTextBox.Name = "addPartMachineIDTextBox";
             this.addPartMachineIDTextBox.Size = new System.Drawing.Size(166, 22);
-            this.addPartMachineIDTextBox.TabIndex = 36;
+            this.addPartMachineIDTextBox.TabIndex = 9;
             // 
             // addPartNameTextBox
             // 
             this.addPartNameTextBox.Location = new System.Drawing.Point(228, 117);
             this.addPartNameTextBox.Name = "addPartNameTextBox";
             this.addPartNameTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addPartNameTextBox.TabIndex = 35;
+            this.addPartNameTextBox.TabIndex = 4;
             // 
             // addPartInvTextBox
             // 
             this.addPartInvTextBox.Location = new System.Drawing.Point(228, 168);
             this.addPartInvTextBox.Name = "addPartInvTextBox";
             this.addPartInvTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addPartInvTextBox.TabIndex = 34;
+            this.addPartInvTextBox.TabIndex = 5;
             // 
             // addPartPriceCostTextBox
             // 
             this.addPartPriceCostTextBox.Location = new System.Drawing.Point(228, 222);
             this.addPartPriceCostTextBox.Name = "addPartPriceCostTextBox";
             this.addPartPriceCostTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addPartPriceCostTextBox.TabIndex = 33;
+            this.addPartPriceCostTextBox.TabIndex = 6;
             // 
             // addPartMaxTextBox
             // 
             this.addPartMaxTextBox.Location = new System.Drawing.Point(228, 273);
             this.addPartMaxTextBox.Name = "addPartMaxTextBox";
             this.addPartMaxTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addPartMaxTextBox.TabIndex = 32;
+            this.addPartMaxTextBox.TabIndex = 7;
             // 
             // addPartMinTextBox
             // 
             this.addPartMinTextBox.Location = new System.Drawing.Point(411, 273);
             this.addPartMinTextBox.Name = "addPartMinTextBox";
             this.addPartMinTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addPartMinTextBox.TabIndex = 31;
+            this.addPartMinTextBox.TabIndex = 8;
             // 
             // addPartIDTextBox
             // 
             this.addPartIDTextBox.Location = new System.Drawing.Point(228, 67);
             this.addPartIDTextBox.Name = "addPartIDTextBox";
             this.addPartIDTextBox.Size = new System.Drawing.Size(100, 22);
-            this.addPartIDTextBox.TabIndex = 30;
+            this.addPartIDTextBox.TabIndex = 3;
             // 
             // addPartCancelButton
             // 
             this.addPartCancelButton.Location = new System.Drawing.Point(464, 386);
             this.addPartCancelButton.Name = "addPartCancelButton";
             this.addPartCancelButton.Size = new System.Drawing.Size(75, 23);
-            this.addPartCancelButton.TabIndex = 29;
+            this.addPartCancelButton.TabIndex = 11;
             this.addPartCancelButton.Text = "Cancel";
             this.addPartCancelButton.UseVisualStyleBackColor = true;
             this.addPartCancelButton.Click += new System.EventHandler(this.addPartCancel_Click);
@@ -139,7 +139,7 @@
             this.addPartSaveButton.Location = new System.Drawing.Point(362, 386);
             this.addPartSaveButton.Name = "addPartSaveButton";
             this.addPartSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.addPartSaveButton.TabIndex = 28;
+            this.addPartSaveButton.TabIndex = 10;
             this.addPartSaveButton.Text = "Save";
             this.addPartSaveButton.UseVisualStyleBackColor = true;
             this.addPartSaveButton.Click += new System.EventHandler(this.addPartSave_Click);

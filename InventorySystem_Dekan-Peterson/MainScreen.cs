@@ -13,23 +13,25 @@ namespace InventorySystem_Dekan_Peterson
 {
     public partial class MainScreen : Form
     {
+        // Loads in templates for DGV's and populates them from Inventory class
         public void TestProducts()
         {
             InventorySystem_Dekan_Peterson.Inventory.PopulateTestLists();
 
-            // All Parts in inventory show in the left table
+            
             var mainBindingPart = new BindingSource();
             mainBindingPart.DataSource = InventorySystem_Dekan_Peterson.Inventory.AllParts;
             mainDataGridParts.DataSource = mainBindingPart;
 
             mainDataGridParts.Columns["PartID"].HeaderText = "Part ID";
-            mainDataGridParts.Columns["Name"].HeaderText = "Part Name";
+            mainDataGridParts.Columns.["Name"].HeaderText = "Part Name";
             mainDataGridParts.Columns["InStock"].HeaderText = "Inventory";
-            mainDataGridParts.Columns["Price"].HeaderText = "Price/Cost per Unit";
+            mainDataGridParts.Columns["Price"].HeaderText = "Price per Unit";
             mainDataGridParts.Columns["Max"].Visible = false;
             mainDataGridParts.Columns["Min"].Visible = false;
+            
 
-            // All Products in inventory show in the right table
+            
             var mainBindingProd = new BindingSource();
             mainBindingProd.DataSource = InventorySystem_Dekan_Peterson.Inventory.Products;
             mainDataGridProducts.DataSource = mainBindingProd;
@@ -37,7 +39,7 @@ namespace InventorySystem_Dekan_Peterson
             mainDataGridProducts.Columns["ProductID"].HeaderText = "Product ID";
             mainDataGridProducts.Columns["Name"].HeaderText = "Product Name";
             mainDataGridProducts.Columns["InStock"].HeaderText = "Inventory";
-            mainDataGridProducts.Columns["Price"].HeaderText = "Price/Cost per Unit";
+            mainDataGridProducts.Columns["Price"].HeaderText = "Price per Unit";
             mainDataGridProducts.Columns["Max"].Visible = false;
             mainDataGridProducts.Columns["Min"].Visible = false;
         }
@@ -48,6 +50,7 @@ namespace InventorySystem_Dekan_Peterson
             TestProducts();
         }
 
+        // Search button for parts DGV - Returning "Nothing found" if no results
         private void mainPartsSearch_Click(object sender, EventArgs e)
         {
             BindingList<Part> TempList = new BindingList<Part>();
@@ -72,11 +75,13 @@ namespace InventorySystem_Dekan_Peterson
             }
         }
 
+        // Add button for parts DGV - This will open AddParts form
         private void mainPartsAdd_Click(object sender, EventArgs e)
         {
             new AddPart().ShowDialog();
         }
 
+        // Modify button for parts DGV - uses inhouse/outsourced parts to determine what version of ModifyPart form to open
         private void mainPartsModify_Click(object sender, EventArgs e)
         {
             if (mainDataGridParts.CurrentRow.DataBoundItem.GetType() == typeof(InventorySystem_Dekan_Peterson.InHousePart))
@@ -90,15 +95,16 @@ namespace InventorySystem_Dekan_Peterson
                 new ModifyPart(outPart).ShowDialog();
             }
         }
-        //Not Working
+        
+        // Delete button for Parts DGV
         private void mainPartsDelete_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in mainDataGridParts.SelectedRows)
-            {
-                mainDataGridParts.Rows.RemoveAt(row.Index);
-            }
+            int rowIndex = mainDataGridParts.CurrentCell.RowIndex;
+            mainDataGridParts.Rows.RemoveAt(rowIndex);
+            
         }
 
+        // Search button for Products DGV - Returning "Nothing found" if no results
         private void mainProductSearch_Click(object sender, EventArgs e)
         {
             BindingList<Product> TempList = new BindingList<Product>();
@@ -123,12 +129,13 @@ namespace InventorySystem_Dekan_Peterson
             }
         }
 
+        // Add button for Products DGV - This will open AddProducts form
         private void mainProductAddButton_Click(object sender, EventArgs e)
         {
             new AddProduct().ShowDialog();
         }
 
-        
+        // Delete button for Products DGV
         private void mainProductDeleteButton_Click(object sender, EventArgs e)
         {
             Product prod = (Product)mainDataGridProducts.CurrentRow.DataBoundItem;
@@ -138,13 +145,12 @@ namespace InventorySystem_Dekan_Peterson
                     return;
             }
 
-            //Not Working
-            foreach (DataGridViewRow row in mainDataGridProducts.SelectedRows)
-            {
-                mainDataGridProducts.Rows.RemoveAt(row.Index);
-            }
+            int rowIndex = mainDataGridProducts.CurrentCell.RowIndex;
+            mainDataGridProducts.Rows.RemoveAt(rowIndex);
+
         }
 
+        // Modify button for products DGV
         private void mainProductModifyButton_Click(object sender, EventArgs e)
         {
 
@@ -152,6 +158,7 @@ namespace InventorySystem_Dekan_Peterson
             new ModifyProduct(selectedProduct).ShowDialog();
         }
 
+        // Cancel button for MainScreen - Closes application
         private void mainExitbutton_Click(object sender, EventArgs e)
         {
             this.Close();

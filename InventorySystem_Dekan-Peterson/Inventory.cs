@@ -14,12 +14,12 @@ namespace InventorySystem_Dekan_Peterson
         public static BindingList<Part> AllParts = new BindingList<Part>();
 
 
-        //methods for products
+//methods for products
         public static void AddProduct(Product prod)
         {
             Products.Add(prod);
         }
-
+        // Removes products from list by ID
         public static bool RemoveProduct(int productID)
         {
             bool success = false;
@@ -38,7 +38,7 @@ namespace InventorySystem_Dekan_Peterson
             }
             return success;
         }
-    
+        // Searches list of Products by ID
         public static Product LookupProduct(int productID)
         {
             foreach (Product prod in Products)
@@ -51,6 +51,7 @@ namespace InventorySystem_Dekan_Peterson
             Product emptyProd = new InventorySystem_Dekan_Peterson.Product();
             return emptyProd;
         }
+        // Updates list of Products
         public static void UpdateProduct(int productID, Product updatedProduct)
         {
             foreach (Product currentProd in Products)
@@ -69,23 +70,26 @@ namespace InventorySystem_Dekan_Peterson
         }
 
 
-//methods for parts
+// methods for parts
         public static void AddPart(Part part)
         {
             AllParts.Add(part);
         }
-        public static bool DeletePart(Part part)
+        // Deletes part from list
+        public static bool DeletePart(int part)
         {
-            try
-            {
-                AllParts.Remove(part);
-                return true;
-            }
-            catch
+            Part partToDelete = LookupPart(part);
+            if (partToDelete == null)
             {
                 return false;
             }
+            else
+            {
+                AllParts.Remove(partToDelete);
+                return true;
+            }
         }
+        // Searches for part
         public static Part LookupPart(int partID)
         {
             foreach (Part part in AllParts)
@@ -98,89 +102,56 @@ namespace InventorySystem_Dekan_Peterson
             Part emptyPart = null;  
             return emptyPart;
         }
-        public static void UpdatePart(int partID, InHousePart inPart)
-        {
-            for (int i = 0; i < AllParts.Count; i++)
-            {
-                if (AllParts[i].GetType() == typeof(InventorySystem_Dekan_Peterson.InHousePart))
-                {
-                    InHousePart newPart = (InHousePart)AllParts[i];
 
-                    if (newPart.PartID == partID)
-                    {
-                        newPart.Name = inPart.Name;
-                        newPart.InStock = inPart.InStock;
-                        newPart.Price = inPart.Price;
-                        newPart.Max = inPart.Max;
-                        newPart.Min = inPart.Min;
-                        newPart.MachineID = inPart.MachineID;
-                    }
-                }
-            }
+        // Updates list of parts
+        public static void UpdatePart(int partID, Part Allparts)
+        {
+            DeletePart(partID);
+            AddPart(Allparts);
         }
 
-        public static void UpdatePart(int partID, OutsourcedPart outPart)
-        {
-            for (int i = 0; i < AllParts.Count; i++)
-            {
-                if (AllParts[i].GetType() == typeof(InventorySystem_Dekan_Peterson.OutsourcedPart))
-                {
-                    OutsourcedPart newPart = (OutsourcedPart)AllParts[i];
-
-                    if (newPart.PartID == partID)
-                    {
-                        newPart.Name = outPart.Name;
-                        newPart.InStock = outPart.InStock;
-                        newPart.Price = outPart.Price;
-                        newPart.Max = outPart.Max;
-                        newPart.Min = outPart.Min;
-                        newPart.CompanyName = outPart.CompanyName;
-                    }
-                }
-            }
-        }
-
+        // Populates DGV with test Parts and Products
         public static void PopulateTestLists()
         {
 
-            Product dummyProd1 = new Product(1, "Product 1", 10, 12.00m, 20, 5);
-            Product dummyProd2 = new Product(2, "Product 2", 10, 8.00m, 25, 5);
-            Product dummyProd3 = new Product(3, "Product 3", 10, 5m, 25, 5);
-            Product dummyProd4 = new Product(4, "Product 4", 10, 3m, 25, 5);
+            Product testProduct1 = new Product(1, "Test Product 1", 20, 10.00m, 20, 5);
+            Product testProduct2 = new Product(2, "Test Product 2", 10, 9.00m, 25, 5);
+            Product testProduct3 = new Product(3, "Test Product 3", 10, 6m, 25, 5);
+            Product testProduct4 = new Product(4, "Test Product 4", 10, 9m, 25, 5);
 
-            Products.Add(dummyProd1);
-            Products.Add(dummyProd2);
-            Products.Add(dummyProd3);
-            Products.Add(dummyProd4);
+            Products.Add(testProduct1);
+            Products.Add(testProduct2);
+            Products.Add(testProduct3);
+            Products.Add(testProduct4);
 
             // add mach ids and comp names
-            Part dummyPart1A = new InHousePart(1, "Part 1.A", 15, 15.00m, 30, 10, 9001);
-            Part dummyPart1B = new InHousePart(2, "Part 1.B", 10, 12.00m, 25, 10, 9001);
-            Part dummyPart2A = new InHousePart(3, "Part 2.A", 12, 10.00m, 25, 10, 9002);
-            Part dummyPart2B = new InHousePart(4, "Part 2.B", 15, 5.00m, 25, 10, 9002);
-            Part dummyPart3A = new OutsourcedPart(5, "Part 3.A", 15, 15.00m, 30, 10, "ShopCorp");
-            Part dummyPart3B = new OutsourcedPart(6, "Part 3.B", 10, 12.00m, 25, 10, "ShopCorp");
-            Part dummyPart4A = new OutsourcedPart(7, "Part 4.A", 12, 10.00m, 25, 10, "PPI, LLC");
-            Part dummyPart4B = new OutsourcedPart(8, "Part 4.B", 15, 5.00m, 25, 10, "PPI, LLC");
+            Part testPart1A = new InHousePart(1, "Test Part 1.A", 15, 10.00m, 30, 10, 101);
+            Part testPart1B = new InHousePart(2, "Test Part 1.B", 10, 11.00m, 25, 10, 101);
+            Part testPart2A = new InHousePart(3, "Test Part 2.A", 12, 19.00m, 25, 10, 102);
+            Part testPart2B = new InHousePart(4, "Test Part 2.B", 15, 6.00m, 25, 10, 102);
+            Part testPart3A = new OutsourcedPart(5, "Test Part 3.A", 15, 18.00m, 30, 10, "Test Comp 1");
+            Part testPart3B = new OutsourcedPart(6, "Test Part 3.B", 10, 13.00m, 25, 10, "Test Comp 1");
+            Part testPart4A = new OutsourcedPart(7, "Test Part 4.A", 12, 15.00m, 25, 10, "Test Comp 2");
+            Part testPart4B = new OutsourcedPart(8, "Test Part 4.B", 15, 7.00m, 25, 10, "Test Comp 2");
 
-            AllParts.Add(dummyPart1A);
-            AllParts.Add(dummyPart1B);
-            AllParts.Add(dummyPart2A);
-            AllParts.Add(dummyPart2B);
-            AllParts.Add(dummyPart3A);
-            AllParts.Add(dummyPart3B);
-            AllParts.Add(dummyPart4A);
-            AllParts.Add(dummyPart4B);
+            AllParts.Add(testPart1A);
+            AllParts.Add(testPart1B);
+            AllParts.Add(testPart2A);
+            AllParts.Add(testPart2B);
+            AllParts.Add(testPart3A);
+            AllParts.Add(testPart3B);
+            AllParts.Add(testPart4A);
+            AllParts.Add(testPart4B);
 
             // Add parts to respective Products
-            dummyProd1.AssociatedParts.Add(dummyPart1A);
-            dummyProd1.AssociatedParts.Add(dummyPart1B);
-            dummyProd2.AssociatedParts.Add(dummyPart2A);
-            dummyProd2.AssociatedParts.Add(dummyPart2B);
-            dummyProd3.AssociatedParts.Add(dummyPart3A);
-            dummyProd3.AssociatedParts.Add(dummyPart3B);
-            dummyProd4.AssociatedParts.Add(dummyPart4A);
-            dummyProd4.AssociatedParts.Add(dummyPart4B);
+            testProduct1.AssociatedParts.Add(testPart1A);
+            testProduct1.AssociatedParts.Add(testPart1B);
+            testProduct2.AssociatedParts.Add(testPart2A);
+            testProduct2.AssociatedParts.Add(testPart2B);
+            testProduct3.AssociatedParts.Add(testPart3A);
+            testProduct3.AssociatedParts.Add(testPart3B);
+            testProduct4.AssociatedParts.Add(testPart4A);
+            testProduct4.AssociatedParts.Add(testPart4B);
 
         }
     }

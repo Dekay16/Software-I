@@ -135,7 +135,7 @@
             this.modPartSaveButton.Location = new System.Drawing.Point(362, 386);
             this.modPartSaveButton.Name = "modPartSaveButton";
             this.modPartSaveButton.Size = new System.Drawing.Size(75, 23);
-            this.modPartSaveButton.TabIndex = 8;
+            this.modPartSaveButton.TabIndex = 10;
             this.modPartSaveButton.Text = "Save";
             this.modPartSaveButton.UseVisualStyleBackColor = true;
             this.modPartSaveButton.Click += new System.EventHandler(this.modPartSave_Click);
@@ -145,7 +145,7 @@
             this.modPartCancelButton.Location = new System.Drawing.Point(464, 386);
             this.modPartCancelButton.Name = "modPartCancelButton";
             this.modPartCancelButton.Size = new System.Drawing.Size(75, 23);
-            this.modPartCancelButton.TabIndex = 9;
+            this.modPartCancelButton.TabIndex = 11;
             this.modPartCancelButton.Text = "Cancel";
             this.modPartCancelButton.UseVisualStyleBackColor = true;
             this.modPartCancelButton.Click += new System.EventHandler(this.modPartCancel_Click);
@@ -155,49 +155,49 @@
             this.modPartIDTextBox.Location = new System.Drawing.Point(228, 67);
             this.modPartIDTextBox.Name = "modPartIDTextBox";
             this.modPartIDTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modPartIDTextBox.TabIndex = 10;
+            this.modPartIDTextBox.TabIndex = 3;
             // 
             // modPartMinTextBox
             // 
             this.modPartMinTextBox.Location = new System.Drawing.Point(411, 273);
             this.modPartMinTextBox.Name = "modPartMinTextBox";
             this.modPartMinTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modPartMinTextBox.TabIndex = 11;
+            this.modPartMinTextBox.TabIndex = 8;
             // 
             // modPartMaxTextBox
             // 
             this.modPartMaxTextBox.Location = new System.Drawing.Point(228, 273);
             this.modPartMaxTextBox.Name = "modPartMaxTextBox";
             this.modPartMaxTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modPartMaxTextBox.TabIndex = 12;
+            this.modPartMaxTextBox.TabIndex = 7;
             // 
             // modPartPriceCostTextBox
             // 
             this.modPartPriceCostTextBox.Location = new System.Drawing.Point(228, 222);
             this.modPartPriceCostTextBox.Name = "modPartPriceCostTextBox";
             this.modPartPriceCostTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modPartPriceCostTextBox.TabIndex = 13;
+            this.modPartPriceCostTextBox.TabIndex = 6;
             // 
             // modPartInvTextBox
             // 
             this.modPartInvTextBox.Location = new System.Drawing.Point(228, 168);
             this.modPartInvTextBox.Name = "modPartInvTextBox";
             this.modPartInvTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modPartInvTextBox.TabIndex = 14;
+            this.modPartInvTextBox.TabIndex = 5;
             // 
             // modPartNameTextBox
             // 
             this.modPartNameTextBox.Location = new System.Drawing.Point(228, 117);
             this.modPartNameTextBox.Name = "modPartNameTextBox";
             this.modPartNameTextBox.Size = new System.Drawing.Size(100, 22);
-            this.modPartNameTextBox.TabIndex = 15;
+            this.modPartNameTextBox.TabIndex = 4;
             // 
             // modPartMachCompTextBox
             // 
             this.modPartMachCompTextBox.Location = new System.Drawing.Point(228, 323);
             this.modPartMachCompTextBox.Name = "modPartMachCompTextBox";
             this.modPartMachCompTextBox.Size = new System.Drawing.Size(166, 22);
-            this.modPartMachCompTextBox.TabIndex = 16;
+            this.modPartMachCompTextBox.TabIndex = 9;
             // 
             // modPartInHouseButton
             // 
@@ -207,7 +207,7 @@
             this.modPartInHouseButton.Location = new System.Drawing.Point(183, 9);
             this.modPartInHouseButton.Name = "modPartInHouseButton";
             this.modPartInHouseButton.Size = new System.Drawing.Size(98, 24);
-            this.modPartInHouseButton.TabIndex = 18;
+            this.modPartInHouseButton.TabIndex = 1;
             this.modPartInHouseButton.TabStop = true;
             this.modPartInHouseButton.Text = "In-House";
             this.modPartInHouseButton.UseVisualStyleBackColor = true;
@@ -220,7 +220,7 @@
             this.modPartOutsourceButton.Location = new System.Drawing.Point(307, 9);
             this.modPartOutsourceButton.Name = "modPartOutsourceButton";
             this.modPartOutsourceButton.Size = new System.Drawing.Size(117, 24);
-            this.modPartOutsourceButton.TabIndex = 19;
+            this.modPartOutsourceButton.TabIndex = 2;
             this.modPartOutsourceButton.Text = "Outsourced";
             this.modPartOutsourceButton.UseVisualStyleBackColor = true;
             this.modPartOutsourceButton.CheckedChanged += new System.EventHandler(this.modPartOutsourcedRadio_CheckChanged);

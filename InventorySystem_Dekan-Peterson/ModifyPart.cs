@@ -2,22 +2,27 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace InventorySystem_Dekan_Peterson
 {
     public partial class ModifyPart : Form
     {
-        MainScreen MainForm = (MainScreen)Application.OpenForms["MainScreen"];
+        MainScreen MainMenu = (MainScreen)Application.OpenForms["MainScreen"];
+
         public ModifyPart()
         {
             InitializeComponent();
         }
 
+        // Overload constructor for Inhouse parts - includes MachineID
         public ModifyPart(InHousePart inPart)
         {
             InitializeComponent();
@@ -32,6 +37,7 @@ namespace InventorySystem_Dekan_Peterson
 
         }
 
+        // Overload constructor for outsourced parts - includes CompanyName
         public ModifyPart(OutsourcedPart outPart)
         {
             InitializeComponent();
@@ -42,21 +48,27 @@ namespace InventorySystem_Dekan_Peterson
             modPartPriceCostTextBox.Text = decimal.Parse(outPart.Price.Substring(1)).ToString();
             modPartMaxTextBox.Text = outPart.Max.ToString();
             modPartMinTextBox.Text = outPart.Min.ToString();
-            modPartMachCompTextBox.Text = outPart.CompanyName.ToString();
+            modPartMachCompTextBox.Text = outPart.CompanyName;
 
             modPartOutsourceButton.Checked = true;
         }
 
+        // Inhouse radio button - Changes text to Machine ID
         private void modPartInHouseRadio_CheckChanged(object sender, EventArgs e)
         {
             modPartMachComp.Text = "Machine ID";
+            
         }
 
+        // Outsourced radio button - Changes text to Company Name
         private void modPartOutsourcedRadio_CheckChanged(object sender, EventArgs e)
         {
+
             modPartMachComp.Text = "Company Name";
+
         }
 
+        // Save button for ModifyPart form - uses try/catch to validate inputs
         private void modPartSave_Click(object sender, EventArgs e)
         {
             int minInv;
@@ -71,9 +83,9 @@ namespace InventorySystem_Dekan_Peterson
                 inv = int.Parse(modPartInvTextBox.Text);
                 price = decimal.Parse(modPartPriceCostTextBox.Text);
             }
-            catch 
+            catch
             {
-                MessageBox.Show("Error:\nValues must be numeric.");
+                MessageBox.Show("Error: Text fields need correct values.\nInventory, price, min, max need to be a numeric value.");
                 return;
             }
 
@@ -81,7 +93,7 @@ namespace InventorySystem_Dekan_Peterson
             string name = modPartNameTextBox.Text;
             price = decimal.Parse(modPartPriceCostTextBox.Text);
             minInv = int.Parse(modPartMinTextBox.Text);
-            maxInv = int.Parse (modPartMaxTextBox.Text);
+            maxInv = int.Parse(modPartMaxTextBox.Text);
             inv = int.Parse(modPartInvTextBox.Text);
 
             if (minInv > maxInv)
@@ -95,25 +107,32 @@ namespace InventorySystem_Dekan_Peterson
                 MessageBox.Show("Error:\nInventory must be between maximum and minimum");
                 return;
             }
-            
+
             if (modPartInHouseButton.Checked)
             {
+                
                 InHousePart inPart = new InHousePart(id, name, inv, price, maxInv, minInv, int.Parse(modPartMachCompTextBox.Text));
                 Inventory.UpdatePart(id, inPart);
                 modPartInHouseButton.Checked = true;
+
             }
-            else
+            if (modPartOutsourceButton.Checked)
             {
+                
                 OutsourcedPart outPart = new OutsourcedPart(id, name, inv, price, maxInv, minInv, modPartMachCompTextBox.Text);
                 Inventory.UpdatePart(id, outPart);
                 modPartOutsourceButton.Checked = true;
             }
 
-            this.Close();
-            MainForm.TestProducts();
-            MainForm.mainDataGridParts.Update();
+            Close();
+
+            // Refreshes DGV's on the MainScreen form, then updates it with the new information
+            MainMenu.mainDataGridParts.Update();
+            MainMenu.mainDataGridParts.Refresh();
+            
         }
 
+        // Cancel button for ModifyPart form
         private void modPartCancel_Click(object sender, EventArgs e)
         {
             this.Close();
